@@ -1,0 +1,34 @@
+<canvas width="600" height="400"></canvas> 
+
+<script>
+
+	//o canva define o espaço da tela para desenhar.
+
+	// meta é desenhar a bandeira do Pará, e animar uma bolinha, e vários retângulos distribuidos na tela.
+
+	// toda linguagem que se preza tem uma biblioteca de funções predefinidas, que são chamadas de API.
+
+	//como minha inteção é desenhar, não precisa usar função de escrever texto, ao passo que faz mais sentido ter uma "tela para desenha", o que no mundo Javascript é chamado de Canvas! Por isso também não usa o meta charset, que serve para corrigir problemas de acentuação.
+
+    var tela = document.querySelector("canvas"); //vamos usar o querySelector para que o mundo Javascript tenha acesso ao mundo canvas, definido anteriormente ao Script, assim colocaremos o Canvas dentro do Javascript com a função querySelector para poder manipular.
+
+    //agora além da área da tela para desenhar, também é necessaŕio um pincel
+
+    var pincel = tela.getContext("2d");
+
+
+
+    pincel.fillStyle = "lightgrey";
+
+
+    pincel.fillRect(0, 0, 600, 400); 
+
+    //essa função tá dizendo para preencher com o pincel a área do retângulo, mas não está informado onde exatamente, qual área da tela que é pra começar a pintar. Para isso é necessário posicionar a área da tela que será pintada informando as coordenadas da ponta do retângulo.
+
+    pincel.fillStyle = "lightgrey";
+
+    //aqui é pra dar a cor, mas não é uma função, é uma propriedade, por isso recebe uma propriedade que recebe um valor, um atributo(daí ter o símbolo de =)
+
+
+
+</script>

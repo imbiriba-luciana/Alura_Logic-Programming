@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+
+<script>
+
+	function pulaLinha() {
+
+		document.write("<br>");
+		document.write("<br>");
+	}
+
+
+
+	function mostra(frase) {
+
+		document.write(frase);
+		pulaLinha();
+	}
+	
+
+	var vitorias = prompt("Entre com o número de vitórias");
+	var empates = prompt("Entre com o número de empates");
+
+	var pontos = vitorias*3 + parseInt(empates);
+
+	// O RETORNO DO PROMPT É SEMPRE UMA STRING (UM TEXTO), POR ISSO SE QUISER UMA OPERAÇÃO MATEMÁTICA, É PRECISO ATENTAR QUE NÃO VAI OCORRER UMA CONFUSÃO NO JAVASCRIPT E ELE SOMAR UM NÚMERO COM UM TEXTO, E ASSIM TRANSFORMAR O NÚMERO EM OUTRO. 
+
+	// TAMBÉM LEMBRAR QUE ESSE PROBLEMA VAI OCORRER QUANDO A OPERAÇÃO MATEMÁTICA USAR O +, PORQUE ELE INDICA CONCATENAÇÃO. EM OUTROS OPERADORES MATEMÁTICOS, COMO MULTIPLICA E DIVIDE, ISSO NÃO OCORRERÁ PORQUE O JAVASCRIPT ENTENDE QUE É UMA OPERAÇÃO MATEMÁTICA E E TIRA "AS ASPAS DA VARIÁVEL" INTRODUZIDA NO PROMPT.
+
+	mostra("Os pontos do seu time é " + pontos);
+
+
+</script>

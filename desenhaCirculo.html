@@ -1,0 +1,26 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "grey";
+pincel.fillRect(0,0,600,400);
+
+function desenhaCirculo(evento){
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+    //a função offsetLeft e offsetTop servem para excluir a pequena margem de tela, de modo a tornar as coordenadas das bordas mais precisas, pois sem isso a coordenada estará considerando essa distância também.
+    pincel.fillStyle = "pink";
+    pincel.beginPath();
+    pincel.arc(x,y,10,0, 2*3.14);
+    pincel.fill();
+    console.log(x + "," + y);
+}
+
+tela.onclick = desenhaCirculo;
+
+// aqui a função é chamada sem os parênteses porque senão, a função será executada, mas a intenção é jogar a função para dentro da outra.
+
+</script>

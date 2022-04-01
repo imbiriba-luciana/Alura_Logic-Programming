@@ -1,0 +1,74 @@
+<canvas width = "400" height = "400"></canvas>
+
+<script>
+
+function desenhaQuadrado(x,y,color) {
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+
+pincel.fillStyle = color;
+pincel.fillRect(x, y, 50, 50);
+
+}
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "orange";
+pincel.fillRect(25, 30, 344, 348);
+
+
+// borda
+
+pincel.strokeStyle = "brown";
+pincel.beginPath();
+pincel.moveTo(25,30);
+pincel.lineTo(370,30);
+pincel.lineTo(370,380);
+pincel.lineTo(25,380);
+pincel.lineTo(25,27);
+pincel.lineWidth = 5;
+pincel.stroke();
+
+
+// 1ª fileira
+desenhaQuadrado(75,30,"brown");
+desenhaQuadrado(173,30,"brown");
+desenhaQuadrado(270,30,"brown");
+
+//2ª fileira
+desenhaQuadrado(26,80,"brown");
+desenhaQuadrado(124,80,"brown");
+desenhaQuadrado(222,80,"brown");
+desenhaQuadrado(319,80,"brown");
+
+//3ª fileira
+desenhaQuadrado(75,130,"brown");
+desenhaQuadrado(173,130,"brown");
+desenhaQuadrado(270,130,"brown");
+
+//4ª fileira
+desenhaQuadrado(26,180,"brown");
+desenhaQuadrado(124,180,"brown");
+desenhaQuadrado(222,180,"brown");
+desenhaQuadrado(319,180,"brown");
+
+//5ª fileira
+desenhaQuadrado(75,230,"brown");
+desenhaQuadrado(173,230,"brown");
+desenhaQuadrado(270,230,"brown");
+
+//6ª fileira
+desenhaQuadrado(26,280,"brown");
+desenhaQuadrado(124,280,"brown");
+desenhaQuadrado(222,280,"brown");
+desenhaQuadrado(319,280,"brown");
+
+//7ª fileira
+desenhaQuadrado(75,328,"brown");
+desenhaQuadrado(173,328,"brown");
+desenhaQuadrado(270,328,"brown");
+
+</script>

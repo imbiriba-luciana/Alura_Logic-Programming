@@ -1,0 +1,35 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+	var tela = document.querySelector("canvas");
+	var pincel = tela.getContext("2d");
+
+	// retângulo vermelho
+
+	pincel.fillStyle = "#D10000";
+	pincel.fillRect(0, 0, 600, 400);
+
+	// faixa branca
+
+	pincel.strokeStyle= "white";
+	pincel.beginPath();
+	pincel.moveTo(0, 0);
+	pincel.lineTo(600, 400);
+	pincel.lineWidth = 80;
+	pincel.stroke();
+
+	// estrela azul
+    
+	pincel.fillStyle = "darkblue"; 
+	pincel.beginPath(); 
+    pincel.moveTo(300,160); // Coordenada da cabeça
+	pincel.lineTo(325,230); // Coordenada do perna direita
+	pincel.lineTo(260,185); // Coordenada da braço esquerdo
+	pincel.lineTo(340,185); // Coordenada do braço direito
+	pincel.lineTo(275,230); // Coordenada da perna esquerda
+	pincel.fill();
+    // teste para github.
+
+</script>
+

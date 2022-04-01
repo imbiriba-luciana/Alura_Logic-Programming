@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script>
+
+    var segredo = Math.random;
+
+    var input = document.querySelector("input");
+
+    function verifica() {
+
+        if(input.value == segredo) {
+
+            alert("Você ACERTOU!");
+
+        } else {
+
+            alert("Você ERROU!");
+        }
+    }
+
+    input.value = ""; 
+
+    // esse código somente com aspas é para limpar o campo do input de modo a fechar o popup do alerta e o campo estar novamente vazio para digitar novamente nele.
+
+    input.focus();
+
+    // essa função faz o campo do input brilhar com cor diferente para chamar a atenção do usuário.

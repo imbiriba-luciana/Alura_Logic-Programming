@@ -1,0 +1,23 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+pincel.fillStyle = "grey";
+pincel.fillRect(0,0,600,400);
+
+function exibeAlerta(evento){
+    var x = evento.pageX - tela.offsetLeft;
+    var y = evento.pageY - tela.offsetTop;
+    
+//a função offsetLeft e offsetTop servem para excluir a pequena margem de tela, de modo a tornar as coordenadas das bordas mais precisas, pois sem isso a coordenada estará considerando essa distância também.
+    alert(x + "," + y);
+}
+
+tela.onclick = exibeAlerta;
+
+// aqui a função é chamada sem os parênteses porque senão, a função será executada, mas a intenção é jogar a função para dentro da outra.
+
+</script>

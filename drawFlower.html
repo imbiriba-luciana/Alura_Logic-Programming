@@ -1,0 +1,43 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var screen = document.querySelector('canvas');
+    var brush = screen.getContext('2d');
+    brush.fillStyle = 'lightgreen';
+    brush.fillRect(0, 0, 600, 400);
+
+    function drawCircle(x, y, radius, color) {
+
+        brush.fillStyle = color;
+        brush.beginPath();
+        brush.arc(x, y, radius, 0, 2*3.14);
+        brush.fill();
+    }
+
+    // meio
+
+    drawCircle(300,200,10,"brown");
+    drawCircle(300,200,1,"orange");
+    drawCircle(306,200,1,"orange");
+    drawCircle(294,200,1,"orange");
+    drawCircle(300,206,1,"orange");
+    drawCircle(300,194,1,"orange");
+
+
+    // pétalas
+    drawCircle(280,200,10,"purple");
+    drawCircle(320,200,10,"purple");
+    drawCircle(300,180,10,"purple");
+    drawCircle(300,220,10,"purple");
+
+    // ramo
+    brush.strokeStyle = "brown"; 
+	brush.beginPath(); 
+    brush.moveTo(300,229);
+    brush.lineTo(300,250);
+    brush.lineWidth = 3;
+    brush.stroke();
+
+
+</script>

@@ -1,0 +1,22 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+function desenhaQuadrado(x,y,color) {
+// coloca um x para que a função que eu criei aceite novos valores de x, assim posso mudar a posição e fazer mais de um quadrado ao lado do outro.
+var tela = document.querySelector("canvas");
+var pincel = tela.getContext("2d");
+
+
+pincel.fillStyle = color;
+pincel.fillRect(x, y, 50, 50);
+
+}
+
+desenhaQuadrado(0,0, "lightblue");
+desenhaQuadrado(0,50,"pink");
+desenhaQuadrado(0,100, "lightgreen");
+
+
+
+</script>

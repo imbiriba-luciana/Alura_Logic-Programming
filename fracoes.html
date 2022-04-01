@@ -1,0 +1,74 @@
+<meta charset="UTF-8">
+
+<h2> Exercício de fixação </h2>
+
+<canvas width = "800" height = "600"></canvas>
+
+<script>
+
+function space() {
+
+document.write("<br>");
+document.write("<br>");
+
+}
+
+function drawSquare(x,y,size,color) {
+
+var screen = document.querySelector("canvas");
+var brush = screen.getContext("2d");
+
+brush.fillStyle = color;
+brush.fillRect(x,y,70,70);
+brush.strokeStyle = "black";
+brush.strokeRect(x,y,70,70);
+
+}
+
+function drawText(text,x,y){
+
+var screen = document.querySelector("canvas");
+var brush = screen.getContext("2d");
+brush.font='20px Georgia';
+brush.fillStyle='black';
+brush.fillText(text, x, y);  
+
+}
+
+// questions
+
+// 1
+drawText("1. Qual é a fração?", 50, 30);
+drawSquare(50,50,70,"lightblue");
+drawSquare(120,50,70,"lightblue");
+drawSquare(190,50,70,"lightblue");
+
+
+// 2
+drawText("2. Qual é a fração?", 50, 200);
+drawSquare(50,220,70,"lightblue");
+drawSquare(120,220,70,"lightblue");
+drawSquare(190,220,70,"lightblue");
+drawSquare(260,220,70,"white");
+
+
+// 3
+drawText("3. Qual é a fração?", 50, 370);
+drawSquare(50,390,70,"lightblue");
+drawSquare(120,390,70,"lightblue");
+drawSquare(190,390,70,"lightblue");
+drawSquare(260,390,70,"white");
+drawSquare(330,390,70,"white");
+
+verify();
+input.value = ""; 
+input.focus();
+
+</script>
+
+<input/>
+
+<button> Enviar a resposta </button>
+
+
+

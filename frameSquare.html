@@ -1,0 +1,47 @@
+<canvas width = "600" height = "400"></canvas>
+
+<script>
+
+function drawSquare(x,y,color) {
+var screen = document.querySelector("canvas");
+var brush = screen.getContext("2d");
+
+brush.fillStyle = color;
+brush.fillRect(x, y, 50, 50);
+brush.strokeStyle = "black"; 
+brush.strokeRect(x, y, 50, 50);
+
+}
+
+// código abaixo para tentar reduzir os comandos
+/*
+for (x=0; x<400;x=x+50) {
+    for(y=0; y<400; y=y+50){
+        
+} 
+}
+
+drawSquare(x,0,"grey");
+drawSquare(x,350,"grey");
+drawSquare(0,y,"grey");
+drawSquare(350,y,"grey");
+
+*/
+
+// código abaixo para fazer a borda de quadradinhos
+
+
+for(var x=0; x<400; x=x+50) {
+
+    drawSquare(x,0,"grey");
+    drawSquare(x,350,"grey");
+}
+    
+for(var y=50; y<400; y=y+50) {
+
+    drawSquare(0,y,"grey");
+    drawSquare(350,y,"grey");
+}
+
+
+</script>
